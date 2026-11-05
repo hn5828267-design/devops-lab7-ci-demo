@@ -1,0 +1,22 @@
+pipeline {
+    agent any
+    tools { maven 'M3'; jdk 'JDK21' }
+    options { skipDefaultCheckout(true); disableConcurrentBuilds(); timestamps(); timeout(time: 20, unit: 'MINUTES') }
+    stages {
+        stage('Checkout') { steps { checkout scm } }
+        stage('Build') { steps { dir('sample-java-app') { sh 'mvn -B -ntp clean compile' } } }
+        stage('Test') {
+            steps { dir('sample-java-app') { sh 'mvn -B -ntp test' } }
+            post { always { junit testResults: 'sample-java-app/target/surefire-reports/*.xml', allowEmptyResults: true } }
+        }
+        stage('Package & Archive') {
+            steps {
+                dir('sample-java-app') {
+                    sh 'mvn -B -ntp package -DskipTests'
+                    archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
+                }
+            }
+        }
+    }
+    post { always { cleanWs() } }
+}

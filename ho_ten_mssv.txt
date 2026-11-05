@@ -1,0 +1,5 @@
+Họ tên: Nguyễn Văn Hoàng
+MSSV: [BỔ SUNG MSSV CỦA BẠN]
+Lớp: [BỔ SUNG]
+Bài thực hành: Lab 7 - CI Pipeline với Jenkins, Nexus & SonarQube
+Kiểm tra họ tên, điền MSSV/lớp, đổi tên thư mục và file ZIP trước khi nộp.

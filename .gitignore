@@ -1,0 +1,8 @@
+.env
+**/target/
+**/.scannerwork/
+**/settings.local.xml
+*.log
+*.zip
+artifacts/
+extensions/postman/results.xml

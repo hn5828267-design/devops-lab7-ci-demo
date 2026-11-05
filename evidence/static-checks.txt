@@ -1,0 +1,10 @@
+YAML syntax OK: docker-compose.yml
+XML syntax OK: sample-java-app/pom.xml
+XML syntax OK: jenkins/settings-nexus.xml
+Shell syntax OK: scripts/cleanup.sh
+Shell syntax OK: scripts/start.sh
+Shell syntax OK: sample-java-app/mvnw
+Postman collection JSON parse OK
+JAR integrity and production class OK; test class excluded
+Java classfile target version 61 (Java 17): OK
+Required deliverable files: OK

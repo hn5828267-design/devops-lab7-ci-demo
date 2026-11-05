@@ -1,0 +1,16 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< com.devops.lab7:ci-demo >-----------------------
+[INFO] Building DevOps Lab 7 - CI Pipeline Demo 1.0.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- wrapper:3.3.2:wrapper (default-cli) @ ci-demo ---
+[INFO] Unpacked only-script type wrapper distribution org.apache.maven.wrapper:maven-wrapper-distribution:zip:only-script:3.3.2
+[INFO] Configuring .mvn/wrapper/maven-wrapper.properties to use Maven 3.9.9 and download from https://repo.maven.apache.org/maven2
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  14.543 s
+[INFO] Finished at: 2026-11-05T16:11:56+07:00
+[INFO] ------------------------------------------------------------------------

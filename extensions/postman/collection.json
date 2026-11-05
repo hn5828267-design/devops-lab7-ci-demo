@@ -1,0 +1,33 @@
+{
+  "info": {
+    "name": "Lab7 optional - Lab8 health API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://host.docker.internal:8088"
+    }
+  ],
+  "item": [
+    {
+      "name": "Health status",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/health"
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"HTTP 200\", () => pm.response.to.have.status(200));",
+              "pm.test(\"Application is healthy\", () => pm.expect(pm.response.json().status).to.eql(\"OK\"));"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
